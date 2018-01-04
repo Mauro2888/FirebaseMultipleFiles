@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="match_parent"
+    tools:context="data.multiple.firebase.firebasemultiplefiles.MainActivity">
+
+
+  <TextView
+      android:id="@+id/titleMain"
+      android:textAlignment="center"
+      style="@style/Base.TextAppearance.AppCompat.Title"
+      android:text="@string/app_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+
+  <Button
+      android:id="@+id/btn_upload"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentStart="true"
+      android:background="@drawable/shape_btn"
+      android:text="@string/upload_btn"
+      android:textColor="@color/colortBtn"
+      android:textStyle="bold"
+      />
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/recyclerview"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/titleMain"
+      />
+
+  <LinearLayout
+      android:visibility="gone"
+      android:gravity="center_vertical"
+      android:orientation="vertical"
+      android:id="@+id/emptyView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+    <TextView
+        android:textAlignment="center"
+        android:text="Press UPLOAD Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+  </LinearLayout>
+
+
+</RelativeLayout>

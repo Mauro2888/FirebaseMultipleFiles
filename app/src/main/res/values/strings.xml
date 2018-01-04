@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">FirebaseMultipleFiles</string>
+  <string name="upload_btn">Upload</string>
+</resources>
