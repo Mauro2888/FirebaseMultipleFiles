@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         cursor = context.getContentResolver().query(uri, null, null, null, null);
 
-        int name = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
+        int name = cursor.getColumnIndex(MediaStore.Images.Media.DISPLAY_NAME);
 
         cursor.moveToFirst();
         nameImages = cursor.getString(name);
