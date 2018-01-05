@@ -118,10 +118,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Cursor cursor = null;
 
     String nameImages = null;
-    if (uri.getScheme().equals("content")) {
       try {
 
-        cursor = context.getContentResolver().query(uri, null, null, null, null);
+        String [] proj = { MediaStore.Images.Media.DISPLAY_NAME};
+
+        cursor = context.getContentResolver().query(uri, proj, null, null, null);
 
         int name = cursor.getColumnIndex(MediaStore.Images.Media.DISPLAY_NAME);
 
@@ -132,7 +133,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
           cursor.close();
         }
       }
-    }
     return nameImages;
   }
 
