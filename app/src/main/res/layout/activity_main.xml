@@ -3,12 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    tools:context="data.multiple.firebase.firebasemultiplefiles.MainActivity">
+    tools:context="data.multiple.firebase.firebasemultiplefiles.MainActivity"
+    >
 
 
   <TextView
+      android:padding="10dp"
       android:id="@+id/titleMain"
       android:textAlignment="center"
       style="@style/Base.TextAppearance.AppCompat.Title"
@@ -17,7 +19,22 @@
       android:layout_height="wrap_content"
       />
 
+
+  <ProgressBar
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
+      android:id="@+id/progress_done"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/bottom_nav"
+      android:layout_centerHorizontal="true"
+      android:layout_gravity="center_vertical"
+      android:src="@drawable/ic_star_upload"
+      style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+      />
+
   <Button
+      android:visibility="gone"
       android:id="@+id/btn_upload"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -31,9 +48,24 @@
   <android.support.v7.widget.RecyclerView
       android:id="@+id/recyclerview"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/bottom_nav"
       android:layout_alignParentStart="true"
       android:layout_below="@+id/titleMain"
+      android:layout_marginBottom="17dp"
+      />
+
+  <android.support.design.widget.BottomNavigationView
+      android:id="@+id/bottom_nav"
+      app:menu="@menu/bottom_menu"
+      android:background="@color/colorPrimary"
+      app:itemBackground="@color/colorPrimary"
+      app:itemIconTint="@drawable/selector_state"
+      app:itemTextColor="@drawable/selector_state"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignStart="@+id/recyclerview"
       />
 
   <LinearLayout
@@ -50,6 +82,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
+
+
+
 
   </LinearLayout>
 

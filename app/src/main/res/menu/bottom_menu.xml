@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item
+      android:enabled="true"
+      android:id="@+id/upload_menu"
+      android:title="@string/upload_btn"
+      android:icon="@drawable/ic_upload_btn"
+      app:showAsAction="ifRoom"/>
+
+  <item android:enabled="true"
+    app:showAsAction="ifRoom"
+    android:icon="@drawable/ic_log_finger_menu"
+    android:id="@+id/login"
+    android:title="@string/login_btn"/>
+
+</menu>
